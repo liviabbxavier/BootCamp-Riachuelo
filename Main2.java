@@ -6,18 +6,19 @@ public class Main2 {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
         int numero = 4;
-        while (true) {
-            System.out.println("Qual é o resultado da soma 2 + 2?");
-            int resultado = leitura.nextInt();
-            resultado++;
+        int chute = 0;
+        boolean resultado = true;
 
-            if (resultado == 4) {
+        while (resultado) {
+            System.out.println("Qual é o resultado da soma 2 + 2?");
+            chute = Integer.parseInt(leitura.nextLine());
+
+            if (chute == numero) {
                 System.out.println("Parabéns, você acertou!");
-                break;
+                resultado = false;
             } else {
                 System.out.println("Você errou! Tente novamente.");
             }
-            leitura.close();
         }
     }
 }
